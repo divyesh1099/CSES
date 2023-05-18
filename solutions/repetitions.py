@@ -1,3 +1,4 @@
+#1069
 s = input()
 s = s[::]
 count = 1

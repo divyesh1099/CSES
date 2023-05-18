@@ -1,3 +1,4 @@
+#1094
 n = int(input())
 input_array = list(map(int, input().split()))
 answer = 0

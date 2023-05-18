@@ -1,0 +1,15 @@
+{% extends "home/layout.html" %}
+{% block title %}
+CSES Python Solutions
+{% endblock %}
+{% block body %}
+<div class="comtainer p-3 m-3">
+    <ol>
+        {% for solution in solutions %}
+        <li>
+            <a href="{% url 'solution:solution' solution.id %}">{{ solution.title }}</a>
+        </li>
+        {% endfor %}
+    </ol>
+</div>
+{% endblock %}

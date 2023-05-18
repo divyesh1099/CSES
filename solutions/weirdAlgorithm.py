@@ -1,3 +1,4 @@
+#1068
 n = int(input())
 answer = str(n) + ' '
 while n!= 1:

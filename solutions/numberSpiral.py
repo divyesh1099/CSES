@@ -1,3 +1,4 @@
+#1071
 z = int(input())
 for _ in range(z):
     [a, b] = list(map(int, input().split()))

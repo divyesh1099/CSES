@@ -1,3 +1,4 @@
+#1070
 n = int(input())
 evens = list(i for i in range(1, n+1, 2))
 odds = list(i for i in range(2, n+1, 2))
