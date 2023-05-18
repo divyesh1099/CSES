@@ -3,7 +3,6 @@ It's a compilation of my Solutions of Tasks CSES Problem set.
 Here's the URL to the CSES Problem set. [CSES Problem Set](https://cses.fi/problemset/list/)
 
 ## Index
----
 #### Introductory Problems
   1. [Weird Algorithm](./solutions/weirdAlgorithm.py)
   2. [Missing Number](./solutions/missingNumber.py)
