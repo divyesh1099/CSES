@@ -6,6 +6,14 @@ from bs4 import BeautifulSoup
 
 # Create your views here.
 def index(request):
+    # Refresh Db on getting on this page
+    solutions_folder_path = "..\solutions"
+    os.chdir(solutions_folder_path)
+    for file in os.listdir():
+        if file.endswith(".py"):
+            file_path = f"{solutions_folder_path}\{file}"
+            extract_id_and_code_from_file_and_save_to_database(file_path)
+
     allSolutions = PythonSolution.objects.all()
     solutions = []
     for solution in allSolutions:
@@ -16,20 +24,13 @@ def index(request):
     return render(request, "solution/index.html", context)
 
 def solution(request, id):
-    solutions_folder_path = "..\solutions"
-    os.chdir(solutions_folder_path)
-    for file in os.listdir():
-        if file.endswith(".py"):
-            file_path = f"{solutions_folder_path}\{file}"
-            extract_id_and_code_from_file(file_path)
-        
     solution = PythonSolution.objects.get(id = id)
     context = {
         "solution": solution
     }
     return render(request, "solution/solution.html", context)
 
-def extract_id_and_code_from_file(file_path):
+def extract_id_and_code_from_file_and_save_to_database(file_path):
     with open(file_path, 'r') as f:
 
         # print(f.read())
@@ -41,6 +42,11 @@ def extract_id_and_code_from_file(file_path):
         get_text = get_url.text
         soup = BeautifulSoup(get_text, "html.parser")
         title = soup.select("h1")[0].text.strip()
-        
-        print(solution_id, title)
+        task = soup.select("div.content")[0].text.strip()
+
+        # Create or edit All Solutions
+        (solution, exists) = PythonSolution.objects.get_or_create(id = solution_id, title = title)
+        solution.task = task
+        solution.code = code
+        solution.save()
         

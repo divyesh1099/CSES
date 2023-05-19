@@ -1,3 +1,43 @@
-<div class="container m-3 p-3">
-    Hello Solution Id Wala path
+{% extends "home/layout.html" %}
+{% block title %}
+MotiDivya - {{ solution.title|title }} Python Solution
+{% endblock %}
+{% block body %}
+<div class="container">
+    <h1>{{ solution.title }}</h1>
+
+    <h2>Task</h2>
+    <div class="task">
+        {{ solution.task }}
+    </div>
+    <br>
+    <hr>
+    <h2>Explanation</h2>
+    <div class="explanation">
+        {{ solution.explanation }}
+    </div>
+    <br>
+    <hr>
+    <h2>Code</h2>
+    <div class="code">
+        {{ solution.code }}
+    </div>
+    <br>
+    <hr>
+    <h2>Time Complexity</h2>
+    <div class="time_complexity">
+        {{ solution.time_complexity }}
+    </div>
+    <br>
+    <hr>
+    <h2>Advice of The Day</h2>
+    <div class="aod">
+        {{ solution.aod }}
+    </div>
+    <br>
+    <hr>
+    <div>
+        Latest Edited - <span>{{ solution.edited }}</span>
+    </div>
 </div>
+{% endblock %}
