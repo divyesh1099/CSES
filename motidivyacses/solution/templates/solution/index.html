@@ -7,7 +7,7 @@ CSES Python Solutions
     <ol>
         {% for solution in solutions %}
         <li>
-            <a href="{% url 'solution:solution' solution.id %}">{{ solution.title }}</a>
+            <a href="{% url 'solution:solution' solution.id %}">{{ solution.title|title }}</a>
         </li>
         {% endfor %}
     </ol>

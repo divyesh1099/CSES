@@ -4,35 +4,35 @@ MotiDivya - {{ solution.title|title }} Python Solution
 {% endblock %}
 {% block body %}
 <div class="container">
-    <h1>{{ solution.title }}</h1>
+    <h1>{{ solution.title|title }}</h1>
 
     <h2>Task</h2>
     <div class="task">
-        {{ solution.task }}
+        {{ solution.task|safe }}
     </div>
     <br>
     <hr>
     <h2>Explanation</h2>
     <div class="explanation">
-        {{ solution.explanation }}
+        {{ solution.explanation|safe }}
     </div>
     <br>
     <hr>
     <h2>Code</h2>
     <div class="code">
-        {{ solution.code }}
+        {{ solution.code|safe }}
     </div>
     <br>
     <hr>
     <h2>Time Complexity</h2>
     <div class="time_complexity">
-        {{ solution.time_complexity }}
+        {{ solution.time_complexity|safe }}
     </div>
     <br>
     <hr>
     <h2>Advice of The Day</h2>
     <div class="aod">
-        {{ solution.aod }}
+        {{ solution.aod|safe }}
     </div>
     <br>
     <hr>
