@@ -4,13 +4,48 @@
 MotiDivya CSES
 {% endblock %}
 {% block body %}
-<section class="hero container m-3 p-3">
-    <div class="hero-image">
-        <div class="hero-text">
-          <h1 class="font-weight-bold">I am Divyesh</h1>
-          <p>Here are all the CSES Python Solutions</p>
-          <button class="btn btn-lg bg-light">Wanna See More?</button>
-        </div>
-      </div>
-</section>
+<!-- First Container -->
+<div class="custom-container-fluid bg-1 text-center">
+  <h1 class="margin">Divyesh Nandlal Vishwakarma</h1>
+  <img src="{% static 'img/divyesh.png' %}" class="img-responsive img-circle margin" style="display:inline" alt="Divyesh's Photo" width="350" height="350">
+  <h3>A Technology Enthusiast</h3>
+</div>
+
+<!-- Second Container -->
+<div class="custom-container-fluid bg-2 text-center">
+  <h3 class="margin">What Am I?</h3>
+  <p>Just another Software Developer LOL</p>
+  <a href="https://github.com/divyesh1099" class="btn btn-default btn-lg" target="_blank">
+    <span class="glyphicon glyphicon-search"></span> GitHub <i class="fa fa-github"></i>
+  </a>
+</div>
+
+<!-- Third Container (Grid) -->
+<div class="custom-container-fluid bg-3 text-center">    
+  <h3 class="margin">Where To Find Me?</h3><br>
+  <div class="row">
+    <div class="col-sm-4">
+      <p>Connect on LinkedIn?</p>
+      <a href="https://www.linkedin.com/in/divyesh-vishwakarma-621197175" target="_blank" class="d-flex flex-column justify-content-center align-items-center">
+        <img src="{% static 'img/linkedin.png' %}" class="img-responsive margin contact-image" style="width: auto; height: 100px;" alt="LinkedIn Image">
+        <p>Divyesh Vishwakarma Linkedin</p>
+      </a>
+    </div>
+    <div class="col-sm-4"> 
+      <p>Send me an Email?</p>
+      <a href="mailto:divyesh1099@gmail.com" target="_blank" class="d-flex flex-column justify-content-center align-items-center">
+        <img src="{% static 'img/gmail.png' %}" class="img-responsive margin contact-image" style="width: auto; height: 100px;" alt="Gmail Image">
+        <p>divyesh1099@gmail.com</p>
+      </a>
+    </div>
+    <div class="col-sm-4">
+      <p>Wanna challenge me in Chess?</p>
+      <a href="https://www.chess.com/member/divyesh1099" target="_blank" class="d-flex flex-column justify-content-center align-items-center">
+        <img src="{% static 'img/chess.png' %}" class="img-responsive margin contact-image" style="width: auto; height: 100px;" alt="Chess Image">
+        <p>divyesh1099</p>
+      </a>
+    </div>
+  </div>
+</div>
+
 {% endblock %}
